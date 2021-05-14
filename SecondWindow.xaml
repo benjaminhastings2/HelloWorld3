@@ -1,0 +1,26 @@
+﻿<Window x:Class="HelloWorld3.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorld3"
+        mc:Ignorable="d"
+        Title="SecondWindow" Height="500" Width="500">
+    <ListView x:Name="uxList" Height="150" HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        GridViewColumnHeader.Click="GridViewColumnHeaderClickedHandler">
+        
+        <ListView.View>
+            <GridView>
+                <GridViewColumn DisplayMemberBinding="{Binding Name}"
+                                Header ="Name"
+                                Width= "200">
+                </GridViewColumn>
+                <GridViewColumn DisplayMemberBinding="{Binding Password}"
+                                Header= "Name"
+                                Width= "200">
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+    </ListView>
+</Window>

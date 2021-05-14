@@ -20,16 +20,32 @@ namespace HelloWorld3
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private Models.User user = new Models.User();
+        
         public MainWindow()
         {
             InitializeComponent();
-
-            WindowState = WindowState.Maximized;
+            uxName.DataContext = user;
+            //uxNameError.DataContext = user;
+            //WindowState = WindowState.Maximized;
         }
+
+        //private void uxSubmit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Submitting password:" + uxPassword.Text);
+        //}
 
         private void uxSubmit_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Submitting password:" + uxPassword.Text);
+
+            var window = new SecondWindow();
+            Application.Current.MainWindow = window;
+            Close();
+            window.Show();
         }
+
+
     }
 }
