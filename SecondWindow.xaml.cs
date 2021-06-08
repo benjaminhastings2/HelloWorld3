@@ -104,6 +104,9 @@ namespace HelloWorld3
             dataView.Refresh();
         }
 
+        private void uxList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }
